@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 /*///////////////////////
  Table of Contents
  1. Global Styles
@@ -14,24 +17,26 @@
  5. Media Queries
  /////////////////////*/
 
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/* button Roze #ED4385;*/
+/*Lichtpaars #F2F0FF; !*(voor de grote zwevende woorden, zoals "hello" en "services")*/
+/*Grijs #7A7A7A; !*(voor de service-tegel tekst)*/
+ */
 /* --------------------------------------- 1. Global Styles --------------------------------------- */
 
  h1, h2, h3, h4, h5, h6 {
-     font-family: Merriweather
+   font-family: 'Merriweather', serif;
  }
 
 p {
-    fon-family: roboto;
+    font-family: "Roboto Light", serif;
 }
 
-: root {
-    /*Paars #5722CD;*/
-    /*Blauw #4845E4;*/
-    /* button Roze #ED4385;*/
-    --main-color: #0C0C0C /*(voor standaard tekst)*/;
-    /*Lichtpaars #F2F0FF; !*(voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen*!*/
-    --main-bg-color: #F3F6F9; /*(voor de achtergrond van de projecten)*/
-    /*Grijs #7A7A7A; !*(voor de service-tegel tekst)*!*/
+:root {
+    --main-color: #0C0C0C;
+    --main-bg-color: #F3F6F9;
+
 }
 /* --------------------------------------- 2. Typography ------------------------------------------ */
 
