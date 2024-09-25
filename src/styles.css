@@ -14,7 +14,8 @@
     4.3 Work
     4.4 Services
     4.5 Contact
- 5. Media Queries
+ 5. Footer
+ 6. Media Queries
  /////////////////////*/
 
 
@@ -70,7 +71,6 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
 }
 
 .inner-container {
@@ -79,7 +79,14 @@ p {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
-    border: 2px dashed orange;
+}
+
+.separator {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;;
+    border-bottom: 4vw solid white;
+    margin-top: -4vw;
 }
 
 /* ----------------------------- 3.2 Other ----------------------------- */
@@ -104,16 +111,77 @@ button:hover {
     cursor: pointer;
 }
 
+
 /* --------------------------------------- 4. Areas ------------------------------------------------ */
 
 /* ----------------------------- 4.1 Header ---------------------------- */
 
+.header-section {
+    height: 400px;
+    background: linear-gradient(135deg, #4845E4 5%, #9370db 90%);
+}
+
 /* ----------------------------- 4.2 Hello ----------------------------- */
+
+.hello-section {
+    height: 300px;
+}
 
 /* ----------------------------- 4.3 Work ------------------------------ */
 
+.work-section {
+    background-color: #F3F6F9;
+    height: fit-content;
+}
+
+.separator-work {
+        width: 0;
+        height: 0;
+        border-right: 100vw solid transparent;;
+        border-bottom: 4vw solid #F3F6F9;
+        margin-top: -4vw;
+}
+
 /* ----------------------------- 4.4 Services -------------------------- */
 
+.service-section{
+    height: fit-content;
+}
+
+.separator-services {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;;
+    border-bottom: 4vw solid white;
+    margin-top: -4vw;
+}
 /* ----------------------------- 4.5 Contact --------------------------- */
 
-/* --------------------------------------- 5. Media Queries ---------------------------------------- */
+.contact-section {
+    display: flex;
+    color: white;
+    height: 500px;
+    background: linear-gradient(135deg, #4845E4 5%, #9370db 90%);
+}
+
+.question-content-container {
+    padding-top: 60px;
+}
+
+.separator-contact {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid white;
+    border-bottom: 4vw solid transparent;
+    margin-bottom: -40vw;
+}
+
+/* --------------------------------------- 5. Footer ----------------------------------------------- */
+
+footer {
+    margin: 0;
+    height: 40px;
+    background-color: black;
+}
+
+/* --------------------------------------- 6. Media Queries ---------------------------------------- */
