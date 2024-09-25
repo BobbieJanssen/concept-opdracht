@@ -1,0 +1,179 @@
+outer-container: rode lijn / de omvang van de volledige container
+inner-container: roze lijn
+extra-space: blauwe gestreepte lijn
+
+header:
+header-navigation: blauw
+nav-list: geel
+header-content-wrapper: groen
+squiggly-line: wit
+
+section 2:
+img-container: groen
+content-container: paars
+contact-container: geel
+
+section 3:
+content-container: groen
+background-img: zalm
+content-sections: geel
+text-sections: blauw
+img: orange
+id=rolling-stone
+id=variety
+id=worth
+
+section 4:
+background-img: zalm
+services: limoen groen
+service-container: blauw
+
+
+section 5:
+question-content-container: geel
+work-text-container: groen
+form container: orange
+button: white
+
+
+
+<header class="outer-container">
+<div class="inner-container">
+<nav class="header-navigation">
+<nav list>
+<ul>
+<li><a href="></a><l/i>
+</ul>
+</nav list>
+</nav>
+<div class="header-content-wrapper">
+<h1></h1>
+<p></p>
+<button type="button">
+</button>
+</div>
+<span class=squiggly-line><img src=/></span>
+<div>
+</header>
+<main>
+
+section 1:
+<section class="outer-container">
+<div class="inner-container">
+<span class="hello-image"> (background!)
+<img src etc/>
+</span>
+<div class=content-container>
+<p></p>
+<div>
+<div class=contact>
+<p>blablabla<button type=button>Click here</button> blabla</p>
+</div>
+</div>
+</section>
+
+section 2:
+<section class="outer-container">
+<div class="inner-container">
+<span class=background-image-work><img src/></span>
+
+<div class=extra-space></div>
+
+<div class=content-container>
+<div class=content-section>
+<div class=text-section>
+<h2></h2>
+squiggly line
+<p></p>
+<link>
+</div>
+<div class=text-section id=rolling-stone>
+<h2></h2>
+squiggly line
+<p></p>
+<link>
+</div>
+<div class=text-section id=variety>
+<h2></h2>
+squiggly line
+<p></p>
+<link>
+</div>
+<div class=text-section id=worth>
+<h2></h2>
+squiggly line
+<p></p>
+<link>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+section 3:
+<section class="outer-container">
+<div class="inner-container">
+<div class=extra-space></div>
+<span class=background-image-services><img src=/></span>
+<div class=services>
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+<article class=service-container>
+logo
+<h4></h4>
+<p></p>
+</article>
+
+</div>
+</div>
+</section>
+
+
+section 4:
+<section class="outer-container">
+<div class="inner-container">
+<div class=question-content-container>
+<div class=contact-text-container>
+<h2></h2>
+<p></p>
+</div>
+<form class=form></form>
+</div>
+<button type=button></button>
+</div>
+</section>
+
+
+</main>
+
+<footer>
+<p></p>
+</footer>
