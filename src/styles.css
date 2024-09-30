@@ -20,8 +20,13 @@
 
 
 /* --------------------------------------- 1. Global Styles --------------------------------------- */
-body {
+
+html, body {
+    margin: 0;
+    padding: 0;
     font-size: 16px;
+    width: 100%; /* Ensures full width */
+    overflow-x: hidden; /* Prevents horizontal overflow */
 }
 
 * {
@@ -40,6 +45,7 @@ body {
     --grey: #7A7A7A;
 
 }
+
 /* --------------------------------------- 2. Typography ------------------------------------------ */
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,6 +66,7 @@ h5 {
     font-weight: 300;
     font-size: 30px;
 }
+
 button, input {
     font-family: "roboto", sans-serif;
     font-weight: 100;
@@ -72,34 +79,36 @@ p {
     font-size: 16px;
 }
 
-
 /* --------------------------------------- 3 Layout ----------------------------------------------- */
 
 /* ----------------------------- 3.1 Reusable -------------------------- */
 
 .outer-container {
     display: flex;
-    width: 100vw;
+    flex-basis: 100vw;
     flex-direction: row;
     justify-content: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .inner-container {
-    flex-basis: 1600px;
-    flex-grow: 0;
+    width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     margin: 0 20px;
+    overflow: hidden;
 }
 
-.separator {
-    width: 0;
-    height: 0;
-    padding-top: 2px;
-    border-right: 100vw solid transparent;;
-    border-bottom: 4.8rem solid white;
-    margin-top: -4.9rem;
+section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1 1 200px;
+    min-width: 500px;
+    flex-wrap: wrap;
 }
 
 /* ----------------------------- 3.2 Other ----------------------------- */
@@ -126,6 +135,7 @@ button {
     font-family: 'roboto', serif;
     box-shadow: 2px 10px 18px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
     cursor: pointer;
 }
@@ -137,7 +147,7 @@ button:hover {
 
 .header-container {
     padding-bottom: 2px;
-    flex-basis: 1600px;
+    flex-basis: 1200px;
     flex-grow: 0;
     color: #F3F6F9;
     background: linear-gradient(120deg, #4845E4 10%, rebeccapurple 110%);
@@ -174,13 +184,13 @@ a, a:visited, a:link {
 .header-content-wrapper {
     display: flex;
     flex-direction: row;
-    height: 25rem;
+    height: 30rem;
     width: 60rem;
 }
 
 .header-text {
     overflow: hidden;
-    margin-top: 5rem;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     flex-basis: 1000px;
@@ -199,9 +209,8 @@ a, a:visited, a:link {
 /* ----------------------------- 4.2 Hello ----------------------------- */
 
 .hello-container {
-    flex-basis: 1600px;
+    height: 55rem;
     flex-grow: 0;
-    margin-bottom: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -263,7 +272,7 @@ a, a:visited, a:link {
     font-weight: 400;
 }
 
-#click{
+#click-here-link {
     color: #5722CD;
 }
 
@@ -271,12 +280,12 @@ a, a:visited, a:link {
 
 .work-container {
     background-color: #F3F6F9;
-    height: fit-content;
-    padding-bottom: 8rem;
+    height: 140rem;
+    clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 98%);
 }
 
 .work-section {
-    flex-basis: 1600px;
+    padding-top: 5rem;
     flex-grow: 0;
     display: flex;
     flex-direction: column;
@@ -363,18 +372,9 @@ a, a:visited, a:link {
     flex-direction: row-reverse;
 }
 
-.separator-work {
-    width: 0;
-    height: 0;
-    border-right: 100vw solid transparent;;
-    border-bottom: 4vw solid #F3F6F9;
-    margin-top: -4vw;
-}
-
 /* ----------------------------- 4.4 Services -------------------------- */
 
 .service-container::after {
-    margin-top: 4rem;
     content: 'services';
     position: absolute;
     font-family: "roboto", serif;
@@ -387,23 +387,24 @@ a, a:visited, a:link {
     font-weight: 600;
 }
 
-
-.service-section{
+.service-section {
     height: 1200px;
     display: flex;
+    flex-shrink: 2;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     row-gap: 16px;
-    margin: 190px 20px 30px 20px;
+    margin-top: 7rem;
+    margin-bottom: 10rem;
 }
 
 .service-block img {
     width: 100px;
 }
 
-article h3{
+article h3 {
     color: #5722CD;
     font-size: 1.8rem;
     font-weight: 400;
@@ -416,7 +417,7 @@ article p {
     font-size: 1.2rem;
 }
 
-.service-block{
+.service-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -429,35 +430,24 @@ article p {
     box-shadow: 10px 22px 20px -12px rgba(0, 0, 0, 0.1);
 }
 
-/*////////*/
-
-.separator-services {
-    width: 0;
-    height: 0;
-    border-right: 100vw solid #F3F6F9;
-    border-bottom: 4vw solid transparent;
-    margin-bottom: -4vw;
-}
-
 /* ----------------------------- 4.5 Contact --------------------------- */
 
 .contact-container {
     flex-grow: 0;
     display: flex;
-    flex-basis: fit-content;
+    height: 70rem;
     flex-direction: column;
-    margin-top: -4vw;
     color: #F3F6F9;
     background: linear-gradient(120deg, #4845E4 10%, rebeccapurple 110%);
+    clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 100%);
 }
 
 .inner-contact-container {
-    background: transparent;
     flex-direction: column;
+    padding-top: 2rem;
     align-self: center;
     flex-basis: 1000px;
     flex-grow: 0;
-    margin: 0 20px 20px 0;
 }
 
 .question-content-container {
@@ -471,7 +461,6 @@ article p {
     justify-content: space-between;
     align-items: center;
     height: 930px;
-    width: 1600px;
 }
 
 .contact-text-container {
@@ -480,7 +469,7 @@ article p {
     text-align: center;
 }
 
-.contact-text-container h2{
+.contact-text-container h2 {
     font-weight: 400;
     font-size: 3.5rem;
 }
@@ -491,8 +480,8 @@ article p {
 
 form {
     display: flex;
+    flex-shrink: 2;
     flex-direction: column;
-    flex-basis: 600px;
     width: 1200px;
     justify-content: space-between;
 }
@@ -521,6 +510,7 @@ input {
     margin-bottom: 16px;
     resize: vertical;
 }
+
 input::placeholder {
     color: #7A7A7A;
     font-weight: 400;
@@ -557,13 +547,6 @@ input[type=button] {
     box-shadow: 2px 10px 18px rgba(0, 0, 0, 0.2);
 }
 
-.separator-contact {
-    width: 0;
-    height: 0;
-    border-left: 100vw solid transparent;
-    border-top: 5rem solid white;
-    margin-bottom: 5rem;
-}
 
 /* --------------------------------------- 5. Footer ----------------------------------------------- */
 
@@ -579,23 +562,51 @@ footer {
 
 /* --------------------------------------- 6. Media Queries ---------------------------------------- */
 
-@media screen and (max-width: 576px) {
-    .header-content-wrapper {
-        flex-direction: row;
-        padding: 30px 0 60px ;
-    }
+@media and
 
-    .work-content-section img{
-        flex-basis: auto;
-        margin: 0 0 30px 0;
-        width: 100%;
-    }
+(
+max-width:
 
-    .service-section {
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 16px;
-        margin: 020px;
-        padding: 100px 0;
-    }
+576
+px
+
+)
+{
+/* Global adjustments */
+body {
+    font-size: 14px;
+}
+
+.outer-container {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: fit-content;
+    justify-content: space-between;
+}
+
+.inner-container {
+    flex-direction: column;
+    margin: 0 20px;
+    width: fit-content;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+section {
+    flex: 1 1 auto;
+}
+
+.service-container {
+    flex-direction: row;
+    height: fit-content;
+}
+
+.inner-contact-container {
+    flex-wrap: wrap;
+}
+
+.header-content-wrapper {
+    width: 100%;
+}
+
 }
