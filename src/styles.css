@@ -562,42 +562,42 @@ footer {
 
 /* --------------------------------------- 6. Media Queries ---------------------------------------- */
 
-@media and screen (max-width: 576px) {
+@media (max-width: 576px) {
 
-body {
-    font-size: 14px;
-}
+    body {
+        font-size: 14px;
+    }
 
-.outer-container {
-    flex-direction: column;
-    box-sizing: border-box;
-    width: fit-content;
-    justify-content: space-between;
-}
+    .outer-container {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: fit-content;
+        justify-content: space-between;
+    }
 
-.inner-container {
-    flex-direction: column;
-    margin: 0 20px;
-    width: fit-content;
-    box-sizing: border-box;
-    justify-content: space-between;
-}
+    .inner-container {
+        flex-direction: column;
+        margin: 0 20px;
+        width: fit-content;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
 
-section {
-    flex: 1 1 auto;
-}
+    section {
+        flex: 1 1 auto;
+    }
 
-.service-container {
-    flex-direction: row;
-    height: fit-content;
-}
+    .service-container {
+        flex-direction: row;
+        height: fit-content;
+    }
 
-.inner-contact-container {
-    flex-wrap: wrap;
-}
+    .inner-contact-container {
+        flex-wrap: wrap;
+    }
 
-.header-content-wrapper {
-    width: 100%;
-}
+    .header-content-wrapper {
+        width: 100%;
+    }
 
-}
+    }
