@@ -562,17 +562,8 @@ footer {
 
 /* --------------------------------------- 6. Media Queries ---------------------------------------- */
 
-@media and
+@media and screen (max-width: 576px) {
 
-(
-max-width:
-
-576
-px
-
-)
-{
-/* Global adjustments */
 body {
     font-size: 14px;
 }
